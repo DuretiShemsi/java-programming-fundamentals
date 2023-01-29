@@ -2,7 +2,7 @@ package com.shemsi.game;
 
 import java.util.Scanner;
 
-public class RockPaperScissors {
+public class RockPaperScissorsOneTry {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
 
@@ -29,16 +29,17 @@ public class RockPaperScissors {
                 System.out.println(opponentMove = "rock");
             } else if (randomNumber == 2) {
                 System.out.println(opponentMove = "scissors");
-            }
-             else{
+            } else {
                 System.out.println(opponentMove = "paper");
-                }
+            }
 
-             //check if the user move and opponent move are won, tie or loss
+            //check if the user move and opponent move are won, tie or loss
 
-            if(usersMove.equals(opponentMove)){
+            if (usersMove.equals(opponentMove)) {
                 System.out.println("It's a tie!");
-            } else if ((usersMove.equals("rock") && opponentMove.equals("scissors"))) {
+            } else if ((usersMove.equals("rock") && opponentMove.equals("scissors")) ||
+                    (usersMove.equals("paper") && opponentMove.equals("rock")) ||
+                    (usersMove.equals("scissors") && opponentMove.equals("paper"))) {
                 System.out.println("You won!");
             }
                 else{
